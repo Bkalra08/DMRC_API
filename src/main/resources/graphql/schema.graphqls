@@ -1,0 +1,27 @@
+type Mutation{
+createPassenger(pdetails:PassengerInput):PassengerDetails
+}
+
+type Query{
+
+allPassengers:[PassengerDetails]
+getDetails(Pid:Int):PassengerDetails
+
+}
+
+type PassengerDetails{
+
+    Pid:ID!
+    FROM:String
+    TO:String
+    Fare:Int
+
+
+
+}
+
+input PassengerInput{
+    FROM:String
+    TO:String
+    Fare:Int
+}
